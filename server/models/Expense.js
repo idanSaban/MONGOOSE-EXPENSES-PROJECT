@@ -1,9 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const personSchema = new Schema({
-
+const expenseSchema = new Schema({
+    item:String,
+    amount:Number,
+    date:Date,
+    group:String,
 })
 
-const Person = mongoose.model("Person", personSchema)
-module.exports = Person
+const Expense = mongoose.model("Expense", expenseSchema)
+module.exports = Expense
